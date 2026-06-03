@@ -1,0 +1,38 @@
+[
+  {
+    "description": "ROUTER 接收外部请求，支持 request/reply",
+    "id": "db_router",
+    "filter": [],
+    "ip": "*",
+    "mode": "router",
+    "port": "9199",
+    "protocol": "tcp",
+    "topic": [],
+    "type": "recv",
+    "enabled": true
+  },
+  {
+    "description": "SUB 接收工站发来的数据库请求",
+    "id": "station2_db_sub",
+    "filter": ["from_station2_toDb", "dbreq"],
+    "ip": "127.0.0.1",
+    "mode": "sub",
+    "port": "9201",
+    "protocol": "tcp",
+    "topic": [],
+    "type": "recv",
+    "enabled": true
+  },
+  {
+    "description": "PUB 发布数据库处理结果",
+    "id": "db_result_pub",
+    "filter": [],
+    "ip": "*",
+    "mode": "pub",
+    "port": "9202",
+    "protocol": "tcp",
+    "topic": ["fromDb_to_station2", "dbrep"],
+    "type": "send",
+    "enabled": true
+  }
+]

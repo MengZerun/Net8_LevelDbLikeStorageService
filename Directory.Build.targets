@@ -1,0 +1,42 @@
+<Project>
+  <ItemGroup>
+    <LanguageOutputDirectories Include="
+      $(OutDir)cs;
+      $(OutDir)de;
+      $(OutDir)es;
+      $(OutDir)fr;
+      $(OutDir)it;
+      $(OutDir)ja;
+      $(OutDir)ko;
+      $(OutDir)pl;
+      $(OutDir)pt-BR;
+      $(OutDir)ru;
+      $(OutDir)tr;
+      $(OutDir)zh-Hans;
+      $(OutDir)zh-Hant" />
+  </ItemGroup>
+
+  <Target Name="RemoveLanguageOutputDirectories" AfterTargets="Build">
+    <RemoveDir Directories="@(LanguageOutputDirectories)" />
+  </Target>
+
+  <Target Name="RemoveLanguagePublishDirectories" AfterTargets="Publish" Condition="'$(PublishDir)' != ''">
+    <ItemGroup>
+      <LanguagePublishDirectories Include="
+        $(PublishDir)cs;
+        $(PublishDir)de;
+        $(PublishDir)es;
+        $(PublishDir)fr;
+        $(PublishDir)it;
+        $(PublishDir)ja;
+        $(PublishDir)ko;
+        $(PublishDir)pl;
+        $(PublishDir)pt-BR;
+        $(PublishDir)ru;
+        $(PublishDir)tr;
+        $(PublishDir)zh-Hans;
+        $(PublishDir)zh-Hant" />
+    </ItemGroup>
+    <RemoveDir Directories="@(LanguagePublishDirectories)" />
+  </Target>
+</Project>

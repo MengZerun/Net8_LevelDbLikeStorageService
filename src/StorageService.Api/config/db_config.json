@@ -1,0 +1,13 @@
+{
+  "db_back_path": "D:/dlib",
+  "root_path": "D:/dlib",
+  "http_port": 9877,
+  "diskCheckSpace": 1.0,
+  "is_encrypt": false,
+  "encryption_str": "encrypted",
+  "engine": "leveldb",
+  "enableAdminApi": false,
+  "maxRequestBodyMb": 100,
+  "zmq_enabled": true,
+  "zmq_strict_startup": false
+}
