@@ -1,0 +1,5 @@
+{
+  "log_path": "./log/",
+  "log_clean_days": 3,
+  "min_log_level": 0
+}

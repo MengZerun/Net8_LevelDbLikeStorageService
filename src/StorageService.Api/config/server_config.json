@@ -1,0 +1,20 @@
+[
+  {
+    "filter": [],
+    "ip": "*",
+    "mode": "router",
+    "port": "9199",
+    "protocol": "tcp",
+    "topic": [],
+    "type": "recv"
+  },
+  {
+    "filter": ["from_station2_toDb"],
+    "ip": "127.0.0.1",
+    "mode": "sub",
+    "port": "9201",
+    "protocol": "tcp",
+    "topic": [],
+    "type": "recv"
+  }
+]

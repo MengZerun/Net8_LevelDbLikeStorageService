@@ -1,0 +1,6 @@
+{
+  "dbConfig": "config/db_config.json",
+  "dbList": "config/db.json",
+  "serverConfig": "config/server_config.json",
+  "logConfig": "config/log_config.json"
+}
